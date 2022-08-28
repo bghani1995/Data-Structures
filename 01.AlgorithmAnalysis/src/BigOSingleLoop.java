@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class BigOSingleLoop {
     public static void main(String[] args) {
-        int numberOfOperations=0;
-        int n=100;// size of Data
+        long numberOfOperations=0;
+        int n=1000000;// size of Data
         long startTime;
         long endTime;
         System.out.println("Input size n is = "+ n);
@@ -37,7 +37,14 @@ public class BigOSingleLoop {
         // Task 4 End...................
 
         // Task 5 Logarithmic Complexity...................
-       // Task 5 End...................*/
+        numberOfOperations = 0;
+        startTime = System.currentTimeMillis();
+        for (int i =1; i < n; i*=2){
+            numberOfOperations+=1;
+        }
+        endTime = System.currentTimeMillis();
+        System.out.println("Number of operations with logarithmic: " + numberOfOperations + " in " + (endTime - startTime) + " milliseconds");
+        // Task 5 End...................*/
     }
 }
 
