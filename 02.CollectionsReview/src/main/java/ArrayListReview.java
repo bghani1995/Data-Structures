@@ -47,12 +47,33 @@ public class ArrayListReview {
 
 
         // 4. Lambda
-        System.out.println("**************Printing with lambda***************");
-        students.forEach(student -> System.out.println(student));
+        System.out.println("**************Printing with Lambda***************");
+        students.forEach(student-> System.out.println(student));
 
-        // Sorting Elements in List
-        Collections.sort(students, new);
+
+        // Sorting Elements in List using comparator interface
+        System.out.println("***Sorting with Comparator Interface by Id Descending***");
+        Collections.sort(students, new sortByIdDesc());
+        students.forEach(student-> System.out.println(student));
+
+        System.out.println("Sorting with Comparator Interface by Name Desc......");
+        Collections.sort(students, new sortByNameDesc());
+        students.forEach(student-> System.out.println(student));
+
     }
+    //  implementations of  Comparator
+    static class sortByIdDesc implements Comparator<Student> {
 
-    class
+        @Override
+        public int compare(Student o1, Student o2) {
+            return o2.id-o1.id;
+        }
+    }
+    static class sortByNameDesc implements Comparator<Student> {
+
+        @Override
+        public int compare(Student o1, Student o2) {
+            return o2.name.compareToIgnoreCase(o1.name);
+        }
+    }
 }
