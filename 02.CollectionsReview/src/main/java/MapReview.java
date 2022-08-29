@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class MapReview {
 
@@ -9,13 +10,16 @@ public class MapReview {
         studentsMap.put(1, "Jack");
         studentsMap.put(2, "Julia");
 
+        String st = "Java Developer";
+        System.out.println(findFirstNonRepeating(st));
+
 
 
 
     }
     public static Character findFirstNonRepeating(String str){
         // create a map: this will cost me space complexity
-        Map<Character, Integer> map = new HashMap<>();
+        Map<Character, Integer> map = new TreeMap<>();
         int count;
 
         // count the frequency of chars
