@@ -5,7 +5,15 @@ public class Assignment1_TwoSumSolution1 {
 
     }
 
+    //Bruteforce solution for Two Sum Problem
     public static int[] twoSumSolution1(int[] array, int targetValue){
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 1; j < array.length; j++) {
+                if(array[i] + array[j] == targetValue) return new int[]{i,j};
+            }
+
+        }
 
         return new int[]{};
     }
