@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class LinkedListDemo {
 
 
@@ -24,7 +26,6 @@ public class LinkedListDemo {
             System.out.println("ID of node is: " + current.id);
             current = current.next;
         }
-
 
     }
 }
