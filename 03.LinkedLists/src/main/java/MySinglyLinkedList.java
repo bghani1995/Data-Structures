@@ -22,6 +22,16 @@ public class MySinglyLinkedList {
             size++;
         }
     }
+void printNode(){
+        Node current = head;
+        while(current !=null){
+            if(current.next == null) System.out.println(current.id + " => null");
+            else {
+                System.out.print(current.id + " => ");
 
+            }
+            current = current.next;
+        }
+}
 
 }
